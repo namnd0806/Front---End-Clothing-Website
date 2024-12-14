@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="/src/user/assets/Login/css/style.css">
+<main ng-app="app" ng-controller="registerController">
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Đăng Ký</h1>
+                <div class="social-icons">
+                  <a href="#" class="icon"
+                    ><i class="fa-brands fa-google-plus-g"></i
+                  ></a>
+                  <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="icon"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </div>
+                <span style="margin-bottom: 20px;">Bạn có thể sử dụng email để đăng ký</span>
+                <!-- Username -->
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 120px;" ng-show="!taikhoanRegisValid">
+                    Vui lòng nhập username !
+                </span>
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 92px;" ng-show="!taikhoanRegisLeng">
+                    Username phải từ 7 -> 13 kí tự !
+                </span>
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 55px;" ng-show="!taikhoanRegisForcus">
+                    Username chỉ được nhập số và chữ !
+                </span>
+                <input type="text" placeholder="taikhoan" ng-model="taikhoan" />
+
+                 <!-- EMail -->
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 146px;" ng-show="!emailRegisValid">
+                    Vui lòng nhập email !
+                </span>
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 92px;" ng-show="!emailRegisForcus">
+                    Email không đúng định dạng !
+                </span>
+                <input type="text" placeholder="email" ng-model="email" />
+
+                 <!-- Password -->
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 120px;" ng-show="!matkhauRegisValid">
+                    Vui lòng nhập password !
+                </span>
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 92px;" ng-show="!matkhauRegisLeng">
+                    Password phải từ 6 -> 15 kí tự !
+                </span>
+                <input type="password" placeholder="matkhau" ng-model="matkhau" />
+
+                <button ng-click="register()">Đăng Ký</button>
+              </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Đăng Nhập</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <!-- <span>Bạn có thể sử dụng email và password để đăng nhập</span> -->
+
+                <span style="color: rgba(250, 36, 36, 0.963); margin-right: 120px;" ng-show="!taikhoanLoginValid">
+                    Vui lòng nhập username !
+                </span>
+                <input type="text" placeholder="Username" ng-model="taikhoan">
+               
+                <span style="color: rgba(250, 36, 36, 0.963);  margin-right: 120px;" ng-show="!matkhauLoginValid">
+                    Vui lòng nhập password !
+                </span>
+                <input type="password" placeholder="Password" ng-model="matkhau">
+                
+                <button ng-click="authenticate()">Đăng Nhập</button>
+                <a href="#" style="color: rgb(255, 125, 26);">Bạn đã quên mật khẩu ?</a>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Chào mừng bạn trở lại!</h1>
+                    <p>Đăng nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
+                    <button class="hidden" id="login">Đăng Nhập</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Xin Chào, Bạn!</h1>
+                    <p>Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính năng của trang web</p>
+                    <button class="hidden" id="register">Đăng Ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/src/user/controller/login-controller.js"></script>
+    <script src="/src/user/assets/Login/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+</main>
+
+<!-- </html> -->
