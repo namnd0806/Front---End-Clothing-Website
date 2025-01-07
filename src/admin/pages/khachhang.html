@@ -23,7 +23,7 @@
                     <div class="flex items-center">
                         <h6 class="text-15 grow">Lọc khách hàng</h6>
                         <div class="shrink-0">
-                            <a href="#/themkhachhang" data-modal-target="addUserModal" type="button"
+                            <a id="themmoikh" href="#/themkhachhang" data-modal-target="addUserModal" type="button"
                                 class="text-white btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
                                 <i class="ri-sticky-note-add-line larger-icon"></i>
                                 <span class="align-middle">Thêm mới khách hàng</span>
@@ -65,46 +65,46 @@
                 </div>
                 <div class="card-body">
                     <div class="-mx-5 -mb-5 overflow-x-auto">
-                        <table class="w-full border-separate table-custom border-spacing-y-1 whitespace-nowrap">
+                        <table id="table_khachhang" class="w-full border-separate table-custom border-spacing-y-1 whitespace-nowrap">
                             <thead class="text-left">
-                                <tr
+                                <tr id="header_user"
                                     class="relative rounded-md bg-slate-100 dark:bg-zink-600 after:absolute ltr:after:border-l-2 rtl:after:border-r-2 ltr:after:left-0 rtl:after:right-0 after:top-0 after:bottom-0 after:border-transparent [&.active]:after:border-custom-500 [&.active]:bg-slate-100 dark:[&.active]:bg-zink-600">
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold">
                                         STT
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Mã Khách Hàng
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Ảnh
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Họ Và Tên
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Giới Tính
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Ngày Sinh
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Địa Chỉ
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Email
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Số Điện Thoại
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort">
                                         Trạng Thái
                                     </th>
-                                    <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold">
+                                    <th id="colurm_user" class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold">
                                         Action
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="list">
+                            <tbody id="list_khachhang" class="list">
                                 <tr ng-repeat="kh in KhachHangPT">
                                     <td class="px-3.5 py-2.5 first:pl-5 last:pr-5">
                                         {{$index + 1}}
@@ -145,12 +145,12 @@
                                     </td>
                                     <td class="px-3.5 py-2.5 first:pl-5 last:pr-5">
                                         <div class="flex gap-2">
-                                            <a href="#/updatekhachhang/{{kh.id}}"
+                                            <a id="btn_updatekh" href="#/updatekhachhang/{{kh.id}}"
                                                 class="flex items-center justify-center transition-all duration-200 ease-linear rounded-md size-8 text-slate-500 bg-slate-100 hover:text-white hover:bg-slate-500 dark:bg-zink-600 dark:text-zink-200 dark:hover:text-white dark:hover:bg-zink-500"
                                                 ng-click="redirectToProductDetails(khachHang.idkh)">
                                                 <i class="ri-pencil-line"></i>
                                             </a>
-                                            <a ng-click="CapNhatTrangThai(kh)"
+                                            <a id="btn_updatett" ng-click="CapNhatTrangThai(kh)"
                                                 class="flex items-center justify-center text-red-500 transition-all duration-200 ease-linear bg-red-100 rounded-md size-8 hover:text-white hover:bg-red-500 dark:bg-red-500/20 dark:hover:bg-red-500">
                                                 <i class="ri-arrow-left-right-line"></i>
                                             </a>
@@ -168,7 +168,7 @@
                         </div>
                         <ul class="flex flex-wrap items-center gap-2 shrink-0">
                             <li>
-                                <button ng-click="previousPage()" ng-disabled="currentPage === 1"
+                                <button id="PrevPage" ng-click="previousPage()" ng-disabled="currentPage === 1"
                                     class="inline-flex items-center justify-center bg-white dark:bg-zink-700 h-8 px-3 transition-all duration-150 ease-linear border rounded border-slate-200 dark:border-zink-500 text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-100 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 disabled:text-slate-400 dark:disabled:text-zink-300 disabled:cursor-auto">
                                     Prev
                                 </button>
@@ -179,7 +179,7 @@
                                 </input>
                             </li>
                             <li>
-                                <button ng-click="nextPage()" ng-show="currentPage < totalPages"
+                                <button id="NextPage" ng-click="nextPage()" ng-show="currentPage < totalPages"
                                     class="inline-flex items-center justify-center bg-white dark:bg-zink-700 h-8 px-3 transition-all duration-150 ease-linear border rounded border-slate-200 dark:border-zink-500 text-slate-500 dark:text-zink-200 hover:text-custom-500 dark:hover:text-custom-500 hover:bg-custom-100 dark:hover:bg-custom-500/10 focus:bg-custom-50 dark:focus:bg-custom-500/10 focus:text-custom-500 dark:focus:text-custom-500 disabled:text-slate-400 dark:disabled:text-zink-300 disabled:cursor-auto">
                                     Next
                                 </button>
